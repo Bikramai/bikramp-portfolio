@@ -1,0 +1,41 @@
+$primary: #1C2634;
+@import '~bootstrap/scss/bootstrap';
+@import url('./components/style/scss/_testimonials.scss');
+
+// categories boxes scss
+.category_border {
+    background-color: white;
+
+    .brand_name {
+        color: #6C7278;
+    }
+
+    .brand_title {
+        color: black;
+    }
+
+    .category_item {
+        color: #18173c;
+    }
+
+    .discount_price {
+        color: #B8B5C3;
+    }
+
+    &:hover {
+        background-color: #18173c;
+
+        .brand_name {
+            color: #999;
+        }
+
+        .brand_title {
+            color: white;
+        }
+
+        .category_item {
+            color: #fff;
+        }
+
+    }
+}

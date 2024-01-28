@@ -1,0 +1,373 @@
+@import url('./color.css');
+@import url('./fontFamily.css');
+
+* {
+  font-family: 'popins_regular';
+}
+
+
+.popins_regular {
+  font-family: 'popins_regular';
+}
+
+.popins_bold {
+  font-family: "popins_bold";
+}
+
+.popins_medium {
+  font-family: "popins_medium";
+}
+
+.popins_semibold {
+  font-family: "popins_semibold";
+}
+
+.popins_light {
+  font-family: "popins_light";
+}
+
+/* text colors classes */
+.text_primary {
+  color: var(--primary);
+}
+
+.text_secondary {
+  color: var(--secondary);
+}
+
+.text_lightSecondary {
+  color: var(--secondarylight);
+}
+
+.text_white {
+  color: var(--white);
+}
+
+.text_black {
+  color: var(--black);
+}
+
+.text_dark {
+  color: var(--dark)
+}
+
+/* background colors classes */
+.bg_primary {
+  background-color: var(--primary);
+}
+
+.bg_secondary {
+  background-color: var(--secondary);
+}
+
+.bg_lightSecondary {
+  background-color: var(--secondarylight);
+}
+
+.bg_white {
+  background-color: var(--white);
+}
+
+.bg_black {
+  background-color: var(--black);
+}
+
+.bg_dark {
+  background-color: var(--dark)
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  position: relative;
+}
+
+.loader::after,
+.loader::before {
+  content: '';
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--primary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  animation: animloader 1.5s ease infinite;
+}
+
+
+@keyframes animloader {
+
+  0%,
+  100% {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* home bikramp img with animation */
+
+.bikramp_img {
+  background-image: url('../assets/png/bikramp.png');
+  background-position: 50%;
+  background-color: #d4d4d4;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: morph 8s ease-in-out infinite;
+  -webkit-animation: morph 8s ease-in-out infinite;
+  border: 3px solid hsl(228, 5%, 19%);
+  /* border-radius: 60% 40% 50% 70%/60% 30% 70% 40%; */
+  border-radius: 12%;
+  height: 22rem;
+  position: relative;
+  transition: all 1s ease-in-out;
+  width: 22rem;
+}
+
+@media (max-width: 768px) {
+  .bikramp_img {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+
+@keyframes morph {
+  0% {
+    border-radius: 12%;
+  }
+
+  50% {
+    border-radius: 50%;
+  }
+
+  100% {
+    border-radius: 12%;
+  }
+}
+
+/* home wave hand animation */
+
+
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 80% 80%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0.0deg)
+  }
+
+  10% {
+    transform: rotate(14.0deg)
+  }
+
+  20% {
+    transform: rotate(-8.0deg)
+  }
+
+  30% {
+    transform: rotate(14.0deg)
+  }
+
+  40% {
+    transform: rotate(-4.0deg)
+  }
+
+  50% {
+    transform: rotate(10.0deg)
+  }
+
+  60% {
+    transform: rotate(0.0deg)
+  }
+
+  100% {
+    transform: rotate(0.0deg)
+  }
+}
+
+
+.home_icons img {
+  cursor: pointer;
+  transition: all ease .5s;
+  border-radius: 5px;
+
+}
+
+.home_icons img:hover {
+  transform: translateY(-10px);
+}
+
+
+/* links and email css showing on home page */
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icons-span {
+  border: 1px solid transparent;
+  margin-top: 10px;
+  opacity: .8;
+  cursor: pointer;
+  padding: .25rem;
+}
+
+.icons-span a {
+  color: var(--primary);
+}
+
+.email-link {
+  white-space: nowrap;
+  transform: rotate(270deg);
+  color: var(--primary);
+  margin-bottom: 80px;
+}
+
+.vertical-line {
+  border: 1px solid var(--secondarylight);
+  width: 0;
+  height: 7.187rem;
+}
+
+@media (max-width: 661px) {
+  .icons {
+    display: none;
+  }
+
+  .contentContainer {
+    display: none;
+  }
+}
+
+/* About counter css all */
+
+.counter__wrapper {
+  display: flex;
+  flex-direction: column;
+  color: #ebe9e9;
+  padding: 8rem 3rem;
+}
+
+@media (min-width: 768px) {
+  .counter__wrapper {
+    justify-content: space-between;
+    padding: 8rem 2rem;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 992px) {
+  .counter__wrapper {
+    padding: 8rem 2rem;
+    justify-content: space-around;
+  }
+}
+
+.counter__icon {
+  display: flex;
+  border: 5px solid white;
+  justify-content: center;
+  width: 65px;
+  padding: 15px;
+  border-radius: 50%;
+  margin: 0 auto;
+  transition: all ease-in-out 0.5s;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .counter__icon {
+    border: 5px solid white;
+    width: 80px;
+    padding: 20px;
+  }
+}
+
+.counter__icon:hover {
+  border: 5px solid #a3c9eb;
+  background: #000428;
+  background: -webkit-linear-gradient(to right, #004e92, #000428);
+  background: linear-gradient(to right, #004e92, #000428);
+
+}
+
+.counter__icon svg {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .counter__icon svg {
+    font-size: 2rem;
+  }
+}
+
+p {
+  text-align: center;
+  margin-right: 0;
+}
+
+.counter__number {
+  display: inline-block;
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-right: 5px;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .counter__number {
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+}
+
+.counter__title {
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .counter__title {
+    font-size: 1rem;
+  }
+}
+
+/* counter bg img */
+
+.bg_choose_img {
+  background-image: url('../assets/png/counters-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 30rem;
+}
+
+.bg-overlay {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  /* opacity: 0.7; */
+  width: 100%;
+  background-color: #00000093;
+}

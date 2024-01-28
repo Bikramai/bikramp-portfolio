@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'popins_regular';
+}
+
+
+
+::-webkit-scrollbar {
+    background-color: #fff;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 1px solid transparent;
+    border-radius: 25px;
+    background: #dedede;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
+
+main {
+    font-family: 'popins_regular';
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
