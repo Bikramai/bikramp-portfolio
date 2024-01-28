@@ -63,6 +63,7 @@ const projectsData = [
         cover: require('../assets/about/portfolio.png'),
         title: "Portfolio Website",
         description: "Portfolio Personal Website crafted with HTML, TailwindCSS, JavaScript. This Full Stack project offers a visually appealing and interactive platform to explore and discover new portfilio.",
+        url: "https://bikram-portfolio.netlify.app/",
         category: "react"
     },
     {
